@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Chess</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Three.js CDN for 3D rendering -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/addons/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>3D Chess</h1>
+            <!-- Settings/Options Icon could go here -->
+        </header>
+
+        <main>
+            <div id="game-container">
+                <canvas id="chess-board-3d"></canvas>
+                <div id="game-controls">
+                    <div class="game-status-display">
+                        <p id="turn-indicator">White to move</p>
+                        <p id="game-status"></p>
+                    </div>
+                    <div class="control-buttons">
+                        <button id="new-game-btn">New Game</button>
+                        <button id="undo-move-btn">Undo Move</button>
+                        <button id="hint-btn">Hint</button>
+                        <button id="settings-btn">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 3D Chess. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Game-specific scripts -->
+    <script src="assets/js/chess-engine.js"></script>
+    <script src="assets/js/3d-renderer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
